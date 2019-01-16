@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:PagerSlidingTabStrip="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/menuleft_ll"
+            android:layout_width="@dimen/x1052"
+            android:layout_height="match_parent"
+            android:background="@drawable/navmenu_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <honghesytemui.view.PagerSlidingTabStrip
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x100"
+                    PagerSlidingTabStrip:pstsDividerColor="#00000000"
+                    PagerSlidingTabStrip:pstsDividerPadding="10dip"
+                    PagerSlidingTabStrip:pstsIndicatorColor="#00000000"
+                    PagerSlidingTabStrip:pstsIndicatorHeight="2dip"
+                    PagerSlidingTabStrip:pstsMaxLineWidth="60dip"
+                    PagerSlidingTabStrip:pstsTabBackground="@color/transparent"
+                    PagerSlidingTabStrip:pstsUnderlineColor="#d6d6d6"
+                    PagerSlidingTabStrip:pstsUnderlineHeight="1dip"
+                    PagerSlidingTabStrip:selectedTabTextColor="@color/white1"
+                    PagerSlidingTabStrip:tabTextSize="@dimen/x60"
+                    PagerSlidingTabStrip:underlineMarginTop="0dip" />
+
+                <ImageView
+                    android:id="@+id/msgtip_iv"
+                    android:layout_width="@dimen/x25"
+                    android:layout_height="@dimen/x25"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x170"
+                    android:layout_marginTop="@dimen/x10"
+                    android:src="@drawable/msgtip"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/sidebar_vp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+
+                />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x120"
+                android:layout_marginLeft="@dimen/x102"
+                android:layout_marginRight="@dimen/x102"
+                android:drawableLeft="@drawable/iconsearch"
+                android:drawablePadding="@dimen/x25"
+                android:hint="@string/search_tip"
+                android:paddingBottom="@dimen/y22"
+                android:text="@string/meeting_plan"
+                android:textColor="@color/white"
+                android:textColorHint="#58646f"
+                android:textSize="@dimen/sidebar_searchHint_size"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+
+                android:theme="@style/MyEditText" />
+<!--android:singleLine=&quot;true &quot;
+                android:imeOptions="&quot;actionSearch&quot;"-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/x600"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x110"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/y80">
+
+           <!-- <ListView
+                android:id="@+id/recent_lv"
+                android:layout_width="@dimen/x600"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:dividerHeight="@dimen/y120"
+                android:scrollbars="none" />-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recent_rv"
+                    android:layout_width="@dimen/x600"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:dividerHeight="@dimen/y120"
+                    android:scrollbars="none"
+
+                    />
+
+
+            <ImageView
+                android:id="@+id/del_recentapp"
+                android:layout_width="@dimen/x66"
+                android:layout_height="@dimen/y66"
+                android:layout_margin="@dimen/y105"
+                android:background="@drawable/del_recenttask_selector"
+                android:clickable="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

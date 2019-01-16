@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y340"
+    style="@style/main_item_ll"
+    android:orientation="vertical">
+    <!--
+-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y80"
+        android:background="@drawable/recent_shape"
+        android:gravity="center_vertical"
+        android:padding="@dimen/y10"
+        android:paddingLeft="@dimen/padding_30"
+        android:paddingRight="@dimen/padding_30"
+        android:paddingTop="@dimen/y20">
+
+        <TextView
+            android:id="@+id/appindex_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x34"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/appicon_iv"
+            android:layout_width="@dimen/x45"
+            android:layout_height="@dimen/x45"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginRight="@dimen/x20" />
+
+        <TextView
+            android:id="@+id/appName_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x34" />
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/item_del_iv"
+                android:layout_width="@dimen/x48"
+                android:layout_height="@dimen/x48"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_del" />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    <!--y    300 后加-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y300"
+        android:background="@drawable/recent1_shape"
+        android:gravity="center_vertical"
+        android:padding="@dimen/y10"
+        android:paddingLeft="@dimen/padding_30"
+        android:paddingRight="@dimen/padding_30"
+        android:paddingTop="@dimen/y20">
+
+        <ImageView
+            android:id="@+id/thumnail_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/x20"
+            android:scaleType="centerCrop" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
